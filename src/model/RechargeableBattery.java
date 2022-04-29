@@ -27,9 +27,7 @@ public class RechargeableBattery extends Battery{
 			useFullLifeCost= (super.getCost()*super.getVoltage()*super.getCapacity())/(1000*chargerNumber*FACTOR_NIQUEL_CADIO);
 		}
 
-		System.out.println(useFullLifeCost);
 		return useFullLifeCost;
-
 	}
 
 
