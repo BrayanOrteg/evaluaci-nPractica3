@@ -9,7 +9,10 @@ public class Battery{
 
 
 	public Battery(String name, double voltage, double cost, double capacity){
-
+		this.name=name;
+		this.voltage=voltage;
+		this.cost=cost;
+		this.capacity=capacity;
 	}
 
 	public String getName(){

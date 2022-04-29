@@ -22,12 +22,14 @@ public class RechargeableBattery extends Battery{
 	public double calculateUseFullLifeCost(){
 
 		if (type=='l'){
-			useFullLifeCost= (cost*voltage*capacity)/(1000*chargerNumber*FACTOR_LITIO);
+			useFullLifeCost= (super.getCost()*super.getVoltage()*super.getCapacity())/(1000*chargerNumber*FACTOR_LITIO);
 		}else{
-			useFullLifeCost= (cost*voltage*capacity)/(1000*chargerNumber*FACTOR_NIQUEL_CADIO);
+			useFullLifeCost= (super.getCost()*super.getVoltage()*super.getCapacity())/(1000*chargerNumber*FACTOR_NIQUEL_CADIO);
 		}
 
+		System.out.println(useFullLifeCost);
 		return useFullLifeCost;
+
 	}
 
 

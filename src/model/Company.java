@@ -64,19 +64,18 @@ public class Company{
 
 	public double calculateUsefulPromLifeCost(){
 		int numOfBatteriesRechargeable=0;
-        double prom=0;
         double sum=0;
 
         for (int i= 0; i<MAX_BATTERIES;i++){
-            if(batteries[i]!=null && batteries[i] instanceof RechargeableBattery){
+            if(batteries[i] instanceof RechargeableBattery){
                 sum += ((RechargeableBattery)batteries[i]).calculateUseFullLifeCost();
                 numOfBatteriesRechargeable++;
             }
         }
 
-        prom=sum/numOfBatteriesRechargeable;
+        sum= sum/numOfBatteriesRechargeable;
 
-        return prom;
+        return sum;
 	}
 
 }
