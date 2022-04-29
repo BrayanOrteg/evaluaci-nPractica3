@@ -40,10 +40,10 @@ public class Company{
     	 int numBatteries =0;
          int numRechargeableBatteries =0;
          for(int i =0; i<MAX_BATTERIES; i++){
-            if (batteries [i] != null && batteries[i] instanceof Battery){
-                numBatteries ++;
-            }else{
+            if (batteries [i] != null && batteries[i] instanceof RechargeableBattery){
                 numRechargeableBatteries ++;
+            }else{
+                numBatteries ++;
             }
          }  
 
